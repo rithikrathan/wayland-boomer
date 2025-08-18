@@ -35,8 +35,8 @@ typedef struct {
   float draw_thickness;
 } Configuration;
 
-extern const Configuration g_default_configuration;
-extern const State         g_initial_state;
+extern Configuration g_default_configuration;
+extern State         g_initial_state;
 
 extern Configuration* g_configuration;
 extern Args*          g_args;

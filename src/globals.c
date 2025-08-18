@@ -6,7 +6,7 @@
 #include <memory.h>
 #include <stdlib.h>
 
-const Configuration g_default_configuration = {
+Configuration g_default_configuration = {
     .window_title_boomermode = "wayland-boomer",
     .window_title_imagemode  = "wayland-boomer - image viewer",
     .window_width            = 1080,
@@ -23,12 +23,12 @@ const Configuration g_default_configuration = {
     .draw_thickness          = 3.5F,
 };
 
-const Args g_default_args = {
+Args g_default_args = {
     .program_name      = NULL,
     .screenshot_folder = NULL,
 };
 
-const State g_initial_state = {
+State g_initial_state = {
     .pan                = {0, 0},
     .zoom               = 1.0F,
     .flashlight_enabled = false,

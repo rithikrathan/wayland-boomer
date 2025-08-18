@@ -49,9 +49,10 @@ int main(int argc, char** argv) {
     );
 
     // compensate for monitor scaling: compositor multiplies the window size by the scaling factor
-    int window_width  = (int)roundf((float)img.width / g_configuration->monitor_scaling);
-    int window_height = (int)roundf((float)img.height / g_configuration->monitor_scaling);
-    g_state->zoom     = 1 / g_configuration->monitor_scaling;
+    int window_width     = (int)roundf((float)img.width / g_configuration->monitor_scaling);
+    int window_height    = (int)roundf((float)img.height / g_configuration->monitor_scaling);
+    g_state->zoom        = 1 / g_configuration->monitor_scaling;
+    g_initial_state.zoom = g_state->zoom;
 
     InitWindow(window_width, window_height, g_configuration->window_title_boomermode);
   }
