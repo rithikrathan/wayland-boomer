@@ -11,7 +11,7 @@ default:
 
 .PHONY: run
 run: $(EXEC)
-	grim - | ./$(EXEC)
+	grim - | perf record -T -F 100 -g --call-graph dwarf -e cycles,instructions,cache-misses -- ./$< -ms 1.66666667
 
 .PHONY: build
 build: $(EXEC)
