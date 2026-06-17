@@ -20,9 +20,16 @@
 
 typedef struct {
   Vector2 pan;
+  Vector2 target_pan;
   float   zoom;
+  float   target_zoom;
   bool    flashlight_enabled;
+  bool    flashlight_rendering;
+  bool    flashlight_prev_enabled;
   float   flashlight_radius;
+  float   flashlight_display_radius;
+  float   flashlight_darkness;
+  float   target_flashlight_radius;
   bool    is_drawing;
 } State;
 
