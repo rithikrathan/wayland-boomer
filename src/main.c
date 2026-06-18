@@ -45,9 +45,9 @@ int main(int argc, char** argv) {
   }
 
   Texture2D img_texture = LoadTextureFromImage(img);
-  SetTextureFilter(img_texture, TEXTURE_FILTER_BILINEAR);
+  SetTextureFilter(img_texture, TEXTURE_FILTER_POINT);
   RenderTexture2D img_render_texture = LoadRenderTexture(img.width, img.height);
-  SetTextureFilter(img_render_texture.texture, TEXTURE_FILTER_BILINEAR);
+  SetTextureFilter(img_render_texture.texture, TEXTURE_FILTER_POINT);
   UnloadImage(img);
 
   Shader flashlight_shader = LoadShaderFromMemory(NULL, flashlight_frag_shader_source);
